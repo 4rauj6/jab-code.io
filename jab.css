@@ -12,12 +12,9 @@ body {
 }
 
 nav.navbar {
-    background-color: #ededed;
-    padding: 0.8rem 2rem;
-    border-radius: 35px;
     margin: 20px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     font-family: sans-serif;
 }
 
@@ -28,6 +25,7 @@ nav.navbar ul {
     gap: 2rem;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 nav.navbar ul li a {
@@ -39,6 +37,11 @@ nav.navbar ul li a {
     padding: 0.5rem 0;
     display: inline-block;
     transition: color 0.3s ease;
+}
+
+nav.navbar ul li:first-child {
+    margin-right: auto;
+    margin-left: 50px;
 }
 
 nav.navbar ul li:not(:last-child) a::after {
@@ -68,7 +71,6 @@ nav.navbar ul li:last-child a {
     color: #ffffff;
     padding: 0.7rem 1.8rem;
     border-radius: 50px;
-
     font-weight: bold;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
