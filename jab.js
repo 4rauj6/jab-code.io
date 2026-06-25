@@ -30,3 +30,13 @@ contracUsBtn.forEach(pages => {
         }
     });
 });
+
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        const pagesToHide = document.querySelectorAll(
+            '.homepage, .services-page, .specialties-page, .about-jab-page, .jab-leaders-page'
+        );
+    })
+})
