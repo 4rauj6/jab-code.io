@@ -83,3 +83,7 @@ nav.navbar ul li:last-child a:hover {
 .work-details {
     display: none;
 }
+
+.contract-page {
+    display: none;
+}
