@@ -11,3 +11,4 @@ toggleIconBtn.forEach(element => {
         }
     })
 });
+
