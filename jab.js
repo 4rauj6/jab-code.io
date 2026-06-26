@@ -26,17 +26,14 @@ toggleIconBtn.forEach(element => {
 });
 
 function showPage() {
-    const pagesToHide = document.querySelectorAll(
-        '.homepage, .services-page, .specialties-page, .about-jab-page, .jab-leaders-page'
-    );
-    const pageToShow = document.querySelector('.contract-page');
+    const pagesToHide = document.querySelectorAll('main');
+    const pageToShow = document.getElementById('contract-us');
 
-    if (pageToShow.style.display === 'block') {
-        pageToShow.style.display = 'none';
-        pagesToHide.forEach(page => page.style.display = 'block');
+    if (pageToShow.style.display === 'none') {
+        pagesToHide.style.display = 'block';
     } else {
-        pageToShow.style.display = 'block';
-        pagesToHide.forEach(page => page.style.display = 'none');
+        pagesToHide.style.display = 'block';
+        pageToShow.style.display = 'none';
     }
 }
 

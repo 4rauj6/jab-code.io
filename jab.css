@@ -95,10 +95,6 @@ nav.navbar ul li:last-child a:hover {
     display: none;
 }
 
-.hideElement {
-    display: block;
-}
-
 #contract-us {
     display: none;
 }
