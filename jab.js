@@ -12,31 +12,17 @@ toggleIconBtn.forEach(element => {
     });
 });
 
-const contracUsBtn = document.querySelectorAll('.contract-us-btn');
 
-contracUsBtn.forEach(pages => {
-    pages.addEventListener('click', function () {
-        const pagesToHide = document.querySelectorAll(
-            '.homepage, .services-page, .specialties-page, .about-jab-page, .jab-leaders-page'
-        );
-        const pageToShow = document.querySelector('.contract-page');
+function hidePages() {
+    const main = document.querySelector('main');
+    const sections = main.querySelectorAll('section');
+    const pageToShow = document.getElementById('contract-us');
 
-        if (pageToShow.style.display === 'block') {
-            pageToShow.style.display = 'none';
-            pagesToHide.forEach(page => page.style.display = 'block');
-        } else {
-            pageToShow.style.display = 'block';
-            pagesToHide.forEach(page => page.style.display = 'none');
-        }
+    sections.forEach(section => {
+        section.classList.remove('hideElement');
+
     });
-});
 
-const navLinks = document.querySelectorAll('.nav-link');
 
-navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-        const pagesToHide = document.querySelectorAll(
-            '.homepage, .services-page, .specialties-page, .about-jab-page, .jab-leaders-page'
-        );
-    })
-})
+    pageToShow.classList.add('hideElement');
+}

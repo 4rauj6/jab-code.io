@@ -86,6 +86,10 @@ nav.navbar ul li:last-child a:hover {
     display: none;
 }
 
-.contract-page {
+.hideElement {
+    display: block;
+}
+
+#contract-us {
     display: none;
 }
