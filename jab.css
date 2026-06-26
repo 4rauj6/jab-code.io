@@ -89,3 +89,13 @@ nav.navbar ul li:last-child a:hover {
 .contract-page {
     display: none;
 }
+
+.icone-seta {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.work-container:hover .icone-seta {
+    transform: rotate(180deg);
+}
