@@ -25,24 +25,20 @@ toggleIconBtn.forEach(element => {
     });
 });
 
-const contracUsBtn = document.querySelectorAll('.contract-us-btn');
+function showPage() {
+    const pagesToHide = document.querySelectorAll(
+        '.homepage, .services-page, .specialties-page, .about-jab-page, .jab-leaders-page'
+    );
+    const pageToShow = document.querySelector('.contract-page');
 
-contracUsBtn.forEach(pages => {
-    pages.addEventListener('click', function () {
-        const pagesToHide = document.querySelectorAll(
-            '.homepage, .services-page, .specialties-page, .about-jab-page, .jab-leaders-page'
-        );
-        const pageToShow = document.querySelector('.contract-page');
-
-        if (pageToShow.style.display === 'block') {
-            pageToShow.style.display = 'none';
-            pagesToHide.forEach(page => page.style.display = 'block');
-        } else {
-            pageToShow.style.display = 'block';
-            pagesToHide.forEach(page => page.style.display = 'none');
-        }
-    });
-});
+    if (pageToShow.style.display === 'block') {
+        pageToShow.style.display = 'none';
+        pagesToHide.forEach(page => page.style.display = 'block');
+    } else {
+        pageToShow.style.display = 'block';
+        pagesToHide.forEach(page => page.style.display = 'none');
+    }
+}
 
 const navLinks = document.querySelectorAll('.nav-link');
 
