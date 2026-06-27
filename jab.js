@@ -1,48 +1,28 @@
-const toggleIconBtn = document.querySelectorAll('.works-list i');
+const accordionItems = document.querySelectorAll('.works-list li');
 
-toggleIconBtn.forEach(element => {
-    element.addEventListener('click', function () {
-        const details = this.parentElement.querySelector('.work-details');
-        const setaCuidada = this;
-
-        const jaEstaAberto = details.style.display === 'block';
-
-        const todosOsDetalhes = document.querySelectorAll('.work-details');
-        const todasAsSetas = document.querySelectorAll('.icone-seta');
-
-        todosOsDetalhes.forEach(div => {
-            div.style.display = 'none';
+accordionItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const details = item.querySelector('.work-details');
+        const siblingItems = item.parentElement.querySelectorAll('li');
+        siblingItems.forEach(sibling => {
+            if (sibling !== item) {
+                sibling.classList.remove('active');
+                const siblingDetails = sibling.querySelector('.work-details');
+                if (siblingDetails) siblingDetails.style.maxHeight = null;
+            }
         });
 
-        todasAsSetas.forEach(seta => {
-            seta.classList.remove('ativo');
-        });
-
-        if (!jaEstaAberto) {
-            details.style.display = 'block';
-            setaCuidada.classList.add('ativo');
+        item.classList.add('active');
+        if (details) {
+            details.style.maxHeight = details.scrollHeight + "px";
         }
     });
+    item.addEventListener('mouseleave', () => {
+        const details = item.querySelector('.work-details');
+        item.classList.remove('active');
+        if (details) {
+            details.style.maxHeight = null;
+        }
+    });
+    
 });
-
-function showPage() {
-    const pagesToHide = document.querySelectorAll('main');
-    const pageToShow = document.getElementById('contract-us');
-
-    if (pageToShow.style.display === 'none') {
-        pagesToHide.style.display = 'block';
-    } else {
-        pagesToHide.style.display = 'block';
-        pageToShow.style.display = 'none';
-    }
-}
-
-const navLinks = document.querySelectorAll('.nav-link');
-
-navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-        const pagesToHide = document.querySelectorAll(
-            '.homepage, .services-page, .specialties-page, .about-jab-page, .jab-leaders-page'
-        );
-    })
-})
