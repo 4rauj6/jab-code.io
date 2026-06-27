@@ -18,12 +18,12 @@
     <header>
         <nav class="navbar">
             <ul>
-                <li class="nav-link"><a href="">Home</a></li>
-                <li class="nav-link"><a href="#about-jab">Sobre a JAB Code</a></li>
-                <li class="nav-link"><a href="#services">Nosssos serviços</a></li>
-                <li class="nav-link"><a href="#jab-leaders">Quem faz a JAB Code</a></li>
-                <li class="nav-link"><a href="#our-specialties">Nossas especialidades</a></li>
-                <li><a href="#contract-us">Contrate-nos</a></li>
+                <li class="nav-link" onclick="showContractPage('links-menu')"><a href="">Home</a></li>
+                <li class="nav-link" onclick="showContractPage('links-menu')"><a href="#about-jab">Sobre a JAB Code</a></li>
+                <li class="nav-link" onclick="showContractPage('links-menu')"><a href="#services">Nosssos serviços</a></li>
+                <li class="nav-link" onclick="showContractPage('links-menu')"><a href="#jab-leaders">Quem faz a JAB Code</a></li>
+                <li class="nav-link" onclick="showContractPage('links-menu')"><a href="#our-specialties">Nossas especialidades</a></li>
+                <li><a onclick="showContractPage('contract-menu')">Contrate-nos</a></li>
             </ul>
         </nav>
     </header>
@@ -37,7 +37,7 @@
                     <P>Da troca de bateria até a construções do seu site completo, A JAB Code é o seu espaço favorito em
                         soluções dentro do mundo da T.I </P>
                     <div class="button-group">
-                        <button class="contract-us-btn" onclick="showPage()">Contrate-nos</button>
+                        <button class="contract-us-btn" onclick="showContractPage('contract-menu')">Contrate-nos</button>
                         <button><a href="#about-jab">Conhecer melhor antes de contratar</a></button>
                     </div>
                 </div>

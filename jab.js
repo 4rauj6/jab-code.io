@@ -3,7 +3,7 @@ const accordionItems = document.querySelectorAll('.works-list li');
 accordionItems.forEach(item => {
     item.addEventListener('click', () => {
         const details = item.querySelector('.work-details');
-        const siblingItems = item.parentElement.querySelectorAll('li');
+        const siblingItems = item.parentElement.querySelectorAll('i');
         siblingItems.forEach(sibling => {
             if (sibling !== item) {
                 sibling.classList.remove('active');
@@ -26,3 +26,15 @@ accordionItems.forEach(item => {
     });
     
 });
+
+function showContractPage(originLocal) {
+    const contractPage = document.getElementById('contract-us');
+    const pagesToHide = document.querySelector('main');
+
+    if (originLocal === 'links-menu' &&!contractPage.classList.contains('elementAlreadyHide')) {
+        return; 
+    }
+
+    contractPage.classList.toggle('elementAlreadyHide')
+    pagesToHide.classList.toggle('hideElements');
+}
