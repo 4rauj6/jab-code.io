@@ -1,37 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f4f4f4;
-    color: #000000;
-    line-height: 1.6;
-}
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
+    font-family: 'Inter', sans-serif;
     background-color: #f4f4f4;
     color: #000000;
-    line-height: 1.6;
+    line-height: 1.7;
+}
+
+body p {
+    font-family: 'Poppins';
 }
 
 nav.navbar {
     margin: 20px;
     display: flex;
     justify-content: flex-start;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Unbounded', sans-serif;
 }
 
 nav.navbar ul {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -41,7 +41,7 @@ nav.navbar ul li a {
     color: #000000;
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.87em;
     position: relative;
     padding: 0.5rem 0;
     display: inline-block;
@@ -88,10 +88,59 @@ nav.navbar ul li:last-child a:hover {
     background-color: #222222;
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
-.home-container h1:first-child {
-    font-family: 'Press Start 2P';
+.home-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    height: 85vh;
+    margin-bottom: 700px;
+}
+
+.first-content .title {
+    background-color: black;
+    color: white;
+    font-family: 'Unbounded';
+    font-size: 4.5em;
+    padding: 0 35px;
+    border-radius: 80px;
+}
+
+.first-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.first-content .sub-title {
+    width: 60%;
+    font-size: 2.2em;
+    font-family: 'Unbounded';
+}
+
+.first-content p {
+    width: 50%;
+}
+
+.first-content strong {
+    background-color: black;
+    color: white;
+    padding: 0 15px;
+    border-radius: 10px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .services-container {
